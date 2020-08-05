@@ -152,7 +152,7 @@
                                    ng-model="$ctrl.state.daily.subTab"
                                    ng-class="$ctrl.state.formRadioClass"
                                    checked="checked">
-                            Every
+                            Каждый
                             <select class="days"
                                     name="dailyEveryDaysDays"
                                     ng-disabled="$ctrl.ngDisabled || $ctrl.activeTab !== 'daily' || $ctrl.state.daily.subTab !== 'everyDays'"
@@ -162,7 +162,7 @@
                                     ng-options="monthDay as monthDay for monthDay in $ctrl.selectOptions.monthDays"
                                     ng-class="$ctrl.parsedOptions.formSelectClass">
                             </select>
-                            day(s) at
+                            день в
                             <cron-gen-time-select
                                     is-disabled="$ctrl.ngDisabled || $ctrl.activeTab !== 'daily' || $ctrl.state.daily.subTab !== 'everyDays'"
                                     on-change="$ctrl.regenerateCron()"
@@ -182,7 +182,7 @@
                                    ng-model="$ctrl.state.daily.subTab"
                                    ng-class="$ctrl.state.formRadioClass"
                                    name="daily-radio">
-                            Every week day (Monday through Friday) at
+                            Каждый рабочий день в
                             <cron-gen-time-select
                                     is-disabled="$ctrl.ngDisabled || $ctrl.activeTab !== 'daily' || $ctrl.state.daily.subTab !== 'everyWeekDay'"
                                     on-change="$ctrl.regenerateCron()"
