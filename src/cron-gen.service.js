@@ -27,14 +27,15 @@ export class CronGenService {
         }
         const lastDigit = value.charAt(value.length - 1);
         switch (lastDigit) {
-            case '1':
-                return "st";
             case '2':
-                return "nd";
+            case '6':
+            case '7':
+            case '8':
+                return "ой";
             case '3':
-                return "rd";
+                return "ий";
             default:
-                return "th";
+                return "ый";
         }
     }
 
