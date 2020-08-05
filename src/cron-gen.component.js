@@ -1,7 +1,7 @@
 const ACCEPTABLE_CRON_FORMATS = ['quartz'];
 const DAY_LOOKUPS = {
-    'SUN': 'Sunday',
-    'MON': 'Monday',
+    'SUN': 'Воскресенье',
+    'MON': 'Понедельник',
     'TUE': 'Tuesday',
     'WED': 'Wednesday',
     'THU': 'Thursday',
@@ -9,12 +9,12 @@ const DAY_LOOKUPS = {
     'SAT': 'Saturday'
 };
 const MONTH_WEEK_LOOKUPS = {
-    '#1': 'First',
-    '#2': 'Second',
-    '#3': 'Third',
-    '#4': 'Fourth',
-    '#5': 'Fifth',
-    'L': 'Last'
+    '#1': 'Первый',
+    '#2': 'Второй',
+    '#3': 'Третий',
+    '#4': 'Четвертый',
+    '#5': 'Пятый',
+    'L': 'Последний'
 };
 const MONTH_LOOKUPS = {
     '1': 'January',

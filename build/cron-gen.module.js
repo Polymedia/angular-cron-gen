@@ -97,8 +97,8 @@
 
   var ACCEPTABLE_CRON_FORMATS = ['quartz'];
   var DAY_LOOKUPS = {
-    'SUN': 'Sunday',
-    'MON': 'Monday',
+    'SUN': 'Воскресенье',
+    'MON': 'Понедельник',
     'TUE': 'Tuesday',
     'WED': 'Wednesday',
     'THU': 'Thursday',
@@ -106,12 +106,12 @@
     'SAT': 'Saturday'
   };
   var MONTH_WEEK_LOOKUPS = {
-    '#1': 'First',
-    '#2': 'Second',
-    '#3': 'Third',
-    '#4': 'Fourth',
-    '#5': 'Fifth',
-    'L': 'Last'
+    '#1': 'Первый',
+    '#2': 'Второй',
+    '#3': 'Третий',
+    '#4': 'Четвертый',
+    '#5': 'Пятый',
+    'L': 'Последний'
   };
   var MONTH_LOOKUPS = {
     '1': 'January',
