@@ -312,7 +312,7 @@
         } else if (monthDay === '1W') {
           return 'Первый будний день';
         } else {
-          return "".concat(monthDay).concat(this.cronGenService.appendInt(monthDay), " Day");
+          return "".concat(monthDay).concat(this.cronGenService.appendInt(monthDay), " \u0434\u0435\u043D\u044C");
         }
       }
     }, {
@@ -601,31 +601,24 @@
     }, {
       key: "appendInt",
       value: function appendInt(number) {
-        var value = "".concat(number);
+        //     const secondToLastDigit = value.charAt(value.length - 2);
+        //     if (secondToLastDigit === '1') {
+        //         return "th";
+        //     }
+        // }
+        // const lastDigit = value.charAt(value.length - 1);
+        // switch (lastDigit) {
+        //     case '1':
+        //         return "st";
+        //     case '2':
+        //         return "nd";
+        //     case '3':
+        //         return "rd";
+        //     default:
+        //         return "th";
+        // }
 
-        if (value.length > 1) {
-          var secondToLastDigit = value.charAt(value.length - 2);
-
-          if (secondToLastDigit === '1') {
-            return "th";
-          }
-        }
-
-        var lastDigit = value.charAt(value.length - 1);
-
-        switch (lastDigit) {
-          case '2':
-          case '6':
-          case '7':
-          case '8':
-            return "ой";
-
-          case '3':
-            return "ий";
-
-          default:
-            return "ый";
-        }
+        return "-й";
       }
     }, {
       key: "padNumber",

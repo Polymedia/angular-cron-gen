@@ -422,7 +422,17 @@
                                    ng-model="$ctrl.state.yearly.subTab"
                                    ng-class="$ctrl.state.formRadioClass"
                                    name="yearly-radio">
-                            В
+                            Каждый
+                            <select class="months"
+                                    name="yearlySpecificMonthWeekMontMonth"
+                                    ng-disabled="$ctrl.ngDisabled || $ctrl.activeTab !== 'yearly' || $ctrl.state.yearly.subTab !== 'specificMonthWeek'"
+                                    ng-change="$ctrl.regenerateCron()"
+                                    ng-model="$ctrl.state.yearly.specificMonthWeek.month"
+                                    ng-required="$ctrl.activeTab === 'yearly' && $ctrl.state.yearly.subTab === 'specificMonthWeek'"
+                                    ng-options="month as $ctrl.monthDisplay(month) for month in $ctrl.selectOptions.months"
+                                    ng-class="$ctrl.parsedOptions.formSelectClass">
+                            </select>
+                            в
                             <select class="day-order-in-month"
                                     name="yearlySpecificMonthWeekMonthWeek"
                                     ng-disabled="$ctrl.ngDisabled || $ctrl.activeTab !== 'yearly' || $ctrl.state.yearly.subTab !== 'specificMonthWeek'"
@@ -439,16 +449,6 @@
                                     ng-model="$ctrl.state.yearly.specificMonthWeek.day"
                                     ng-required="$ctrl.activeTab === 'yearly' && $ctrl.state.yearly.subTab === 'specificMonthWeek'"
                                     ng-options="day as $ctrl.dayDisplay(day) for day in $ctrl.selectOptions.days"
-                                    ng-class="$ctrl.parsedOptions.formSelectClass">
-                            </select>
-                            месяца
-                            <select class="months"
-                                    name="yearlySpecificMonthWeekMontMonth"
-                                    ng-disabled="$ctrl.ngDisabled || $ctrl.activeTab !== 'yearly' || $ctrl.state.yearly.subTab !== 'specificMonthWeek'"
-                                    ng-change="$ctrl.regenerateCron()"
-                                    ng-model="$ctrl.state.yearly.specificMonthWeek.month"
-                                    ng-required="$ctrl.activeTab === 'yearly' && $ctrl.state.yearly.subTab === 'specificMonthWeek'"
-                                    ng-options="month as $ctrl.monthDisplay(month) for month in $ctrl.selectOptions.months"
                                     ng-class="$ctrl.parsedOptions.formSelectClass">
                             </select>
                             в
