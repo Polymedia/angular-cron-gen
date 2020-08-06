@@ -19,23 +19,24 @@ export class CronGenService {
 
     appendInt(number) {
         const value = `${number}`;
-        if (value.length > 1) {
-            const secondToLastDigit = value.charAt(value.length - 2);
-            if (secondToLastDigit === '1') {
-                return "th";
-            }
-        }
-        const lastDigit = value.charAt(value.length - 1);
-        switch (lastDigit) {
-            case '1':
-                return "st";
-            case '2':
-                return "nd";
-            case '3':
-                return "rd";
-            default:
-                return "th";
-        }
+        // if (value.length > 1) {
+        //     const secondToLastDigit = value.charAt(value.length - 2);
+        //     if (secondToLastDigit === '1') {
+        //         return "th";
+        //     }
+        // }
+        // const lastDigit = value.charAt(value.length - 1);
+        // switch (lastDigit) {
+        //     case '1':
+        //         return "st";
+        //     case '2':
+        //         return "nd";
+        //     case '3':
+        //         return "rd";
+        //     default:
+        //         return "th";
+        // }
+        return "-й";
     }
 
     padNumber(number) {

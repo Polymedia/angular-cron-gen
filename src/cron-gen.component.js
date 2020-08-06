@@ -1,34 +1,34 @@
 const ACCEPTABLE_CRON_FORMATS = ['quartz'];
 const DAY_LOOKUPS = {
-    'SUN': 'Sunday',
-    'MON': 'Monday',
-    'TUE': 'Tuesday',
-    'WED': 'Wednesday',
-    'THU': 'Thursday',
-    'FRI': 'Friday',
-    'SAT': 'Saturday'
+    'SUN': 'Воскресенье',
+    'MON': 'Понедельник',
+    'TUE': 'Вторник',
+    'WED': 'Среда',
+    'THU': 'Четверг',
+    'FRI': 'Пятница',
+    'SAT': 'Суббота'
 };
 const MONTH_WEEK_LOOKUPS = {
-    '#1': 'First',
-    '#2': 'Second',
-    '#3': 'Third',
-    '#4': 'Fourth',
-    '#5': 'Fifth',
-    'L': 'Last'
+    '#1': 'Первый',
+    '#2': 'Второй',
+    '#3': 'Третий',
+    '#4': 'Четвертый',
+    '#5': 'Пятый',
+    'L': 'Последний'
 };
 const MONTH_LOOKUPS = {
-    '1': 'January',
-    '2': 'February',
-    '3': 'March',
-    '4': 'April',
-    '5': 'May',
-    '6': 'June',
-    '7': 'July',
-    '8': 'August',
-    '9': 'September',
-    '10': 'October',
-    '11': 'November',
-    '12': 'December'
+    '1': 'Январь',
+    '2': 'Февраль',
+    '3': 'Март',
+    '4': 'Апрель',
+    '5': 'Май',
+    '6': 'Июнь',
+    '7': 'Июль',
+    '8': 'Август',
+    '9': 'Сентябрь',
+    '10': 'Октябрь',
+    '11': 'Ноябрь',
+    '12': 'Декабрь'
 };
 
 const States = {
@@ -192,13 +192,13 @@ export class CronGenComponent {
 
     monthDayDisplay(monthDay) {
         if (monthDay === 'L') {
-            return 'Last Day';
+            return 'Каждый день';
         } else if (monthDay === 'LW') {
-            return 'Last Weekday';
+            return 'Каждый день недели';
         } else if (monthDay === '1W') {
-            return 'First Weekday';
+            return 'Первый будний день';
         } else {
-            return `${monthDay}${this.cronGenService.appendInt(monthDay)} Day`;
+            return `${monthDay}${this.cronGenService.appendInt(monthDay)} день`;
         }
     }
 
